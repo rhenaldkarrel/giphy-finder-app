@@ -13,6 +13,12 @@
 	color: white;
 }
 
+.container {
+	width: 100%;
+	max-width: fit-content;
+	margin: 0 auto;
+}
+
 form {
 	display: flex;
 }
@@ -25,6 +31,7 @@ input {
 	font-size: calc(10px + 2vmin);
 	font-family: monospace;
 	padding: 0.5em;
+	flex-grow: 1;
 }
 
 button {
