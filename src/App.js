@@ -1,10 +1,9 @@
 import React from "react";
-import "./App.css";
 
-import SearchGiphy from "./pages/home/index.js";
+import Home from "./pages/home/index";
 
 const App = () => {
-	return <SearchGiphy />;
+	return <Home />;
 };
 
 export default App;
