@@ -80,7 +80,7 @@ const data = [
 const gifLists = data
 	.filter((data) => data.rating == "pg")
 	.map((filteredData) => (
-		<figure>
+		<figure key={filteredData.id}>
 			<img src={filteredData.url} alt='Result' />
 			<figcaption className='gif-title'>{filteredData.title}</figcaption>
 		</figure>
