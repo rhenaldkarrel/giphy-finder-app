@@ -1,14 +1,14 @@
 .App {
 	text-align: center;
+	background-color: #282c34;
+	min-height: 100vh;
 }
 
 .App-header {
-	background-color: #282c34;
-	min-height: 100vh;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	justify-content: center;
+	justify-content: start;
 	font-size: calc(10px + 2vmin);
 	color: white;
 }
@@ -16,5 +16,5 @@
 .container {
 	width: 100%;
 	max-width: fit-content;
-	padding-block: 2em;
+	padding-block: 2rem;
 }

@@ -1,15 +1,16 @@
 .result {
 	display: flex;
-	gap: 1.5rem;
-	max-width: 80vw;
+	gap: 0.5rem;
+	max-width: 100%;
 	flex-wrap: wrap;
 	justify-content: center;
+	padding-inline: 1.5rem;
 }
 
 .result > * {
 	background-color: rgba(255, 255, 255, 0.1);
 	border-radius: 0.3em;
-	margin-top: 1rem;
+	margin-top: 1.5rem;
 }
 
 .result img {
