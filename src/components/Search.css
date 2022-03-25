@@ -1,5 +1,6 @@
 form {
 	display: flex;
+	justify-content: center;
 }
 
 figure {
@@ -11,6 +12,7 @@ figcaption {
 }
 
 input {
+	max-width: 40rem;
 	border: none;
 	background-color: transparent;
 	border-bottom: 1px solid #aaa;

@@ -16,4 +16,5 @@
 .container {
 	width: 100%;
 	max-width: fit-content;
+	padding-block: 2em;
 }
