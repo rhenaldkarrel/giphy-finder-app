@@ -1,6 +1,5 @@
 import React from "react";
 
-import Search from "../../components/Search";
 import GifResult from "../../components/GifResult";
 
 import "./index.css";
@@ -10,7 +9,6 @@ const Home = () => {
 		<div className='App'>
 			<header className='App-header'>
 				<div className='container'>
-					<Search />
 					<GifResult />
 				</div>
 			</header>
