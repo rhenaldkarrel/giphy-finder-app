@@ -1,6 +1,6 @@
 import React from "react";
 
-import GifResult from "../../components/GifResult";
+import GifResult from "../../components/Gif";
 
 import "./index.css";
 

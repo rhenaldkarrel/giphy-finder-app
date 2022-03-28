@@ -1,3 +1,4 @@
+/* Form Search */
 form {
 	display: flex;
 	justify-content: center;
@@ -12,7 +13,8 @@ figcaption {
 }
 
 input {
-	max-width: 40rem;
+	width: 20rem;
+	max-width: 20rem;
 	border: none;
 	background-color: transparent;
 	border-bottom: 1px solid #aaa;
@@ -21,6 +23,10 @@ input {
 	font-family: monospace;
 	padding: 0.5em;
 	flex-grow: 1;
+}
+
+input:focus {
+	outline: none;
 }
 
 button {
@@ -37,4 +43,31 @@ button {
 button:hover {
 	filter: saturate(5);
 	transform: translateY(2px);
+}
+
+/* Gif Result */
+.result {
+	display: flex;
+	gap: 0.5rem;
+	max-width: 100%;
+	flex-wrap: wrap;
+	justify-content: center;
+	padding-inline: 1.5rem;
+}
+
+.result > * {
+	background-color: rgba(255, 255, 255, 0.1);
+	border-radius: 0.3em;
+	margin-top: 1.5rem;
+}
+
+.result img {
+	border-radius: 0.3em;
+	min-height: 15rem;
+	box-shadow: 0 1em 2em rgba(0, 0, 0, 0.3);
+}
+
+.result .gif-title {
+	font-size: 0.875rem;
+	color: rgba(255, 255, 255, 0.3);
 }
