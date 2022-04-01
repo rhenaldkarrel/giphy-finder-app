@@ -1,9 +1,9 @@
 import React from "react";
 
-import Home from "./pages/home/index";
+import Search from "./pages/search/index";
 
 const App = () => {
-	return <Home />;
+	return <Search />;
 };
 
 export default App;
