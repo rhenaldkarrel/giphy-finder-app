@@ -7,7 +7,7 @@ const Search = ({ onSubmit, onChange }) => {
 				type='text'
 				id='search'
 				placeholder='Find a giphy...'
-				autocomplete='off'
+				autoComplete='off'
 				onChange={onChange}
 			/>
 			<button>Search</button>
