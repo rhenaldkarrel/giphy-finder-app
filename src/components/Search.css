@@ -1,0 +1,45 @@
+form {
+	display: flex;
+	justify-content: center;
+}
+
+figure {
+	margin: 0;
+}
+
+figcaption {
+	padding: 0.5em;
+}
+
+input {
+	width: 20rem;
+	max-width: 20rem;
+	border: none;
+	background-color: transparent;
+	border-bottom: 1px solid #aaa;
+	color: white;
+	font-size: calc(10px + 2vmin);
+	font-family: monospace;
+	padding: 0.5em;
+	flex-grow: 1;
+}
+
+input:focus {
+	outline: none;
+}
+
+button {
+	border: none;
+	background-color: #6157ff;
+	color: white;
+	font-size: calc(10px + 2vmin);
+	font-family: monospace;
+	padding: 0.5em;
+	cursor: pointer;
+	transition: all 0.2s;
+}
+
+button:hover {
+	filter: saturate(5);
+	transform: translateY(2px);
+}
