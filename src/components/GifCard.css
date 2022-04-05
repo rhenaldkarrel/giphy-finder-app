@@ -6,6 +6,7 @@ form {
 
 figure {
 	margin: 0;
+	height: fit-content;
 }
 
 figcaption {

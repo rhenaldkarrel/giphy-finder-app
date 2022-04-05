@@ -1,29 +1,37 @@
-import React, { useState } from "react";
+import React, { useState, useContext, useEffect } from "react";
 
+// API
 import { getData } from "../../auth/api";
 
-import GifCard from "../../components/GifCard";
+// Components
+import Gifs from "../../components/GifCard";
 import Search from "../../components/Search";
 
+// Context
+import SearchContext from "../../context/SearchContext";
+
+// Style
 import "./index.css";
 
 const Home = () => {
-	const [result, setResult] = useState([]);
-	const [search, setSearch] = useState("");
+	const defaultKeyword = useContext(SearchContext);
 
-	const handleChange = (e) => setSearch(e.target.value);
+	// State
+	const [result, setResult] = useState([]);
+	const [keyword, setKeyword] = useState(defaultKeyword);
+
+	// Onload immediately search for 'twice' giphy
+	useEffect(() => {
+		getData(defaultKeyword).then((gifs) => {
+			setResult(gifs);
+		});
+	}, []);
+
+	const handleChange = (e) => setKeyword(e.target.value);
 
 	const getResult = () => {
-		getData(search).then((gifs) => setResult(gifs.data));
+		getData(keyword).then((gifs) => setResult(gifs));
 	};
-
-	const data = result.map((gif) => (
-		<GifCard
-			id={gif.id}
-			title={gif.title}
-			images={gif.images.fixed_width.url}
-		/>
-	));
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
@@ -35,7 +43,9 @@ const Home = () => {
 			<header className='App-header'>
 				<div className='container'>
 					<Search onSubmit={handleSubmit} onChange={handleChange} />
-					<div className='result'>{data}</div>
+					<div className='result'>
+						<Gifs data={result} />
+					</div>
 				</div>
 			</header>
 		</div>
