@@ -8,3 +8,14 @@ export const getData = async (search) => {
 		console.log(err);
 	}
 };
+
+export const getTrending = async () => {
+	try {
+		const url = `http://api.giphy.com/v1/gifs/trending?api_key=${process.env.REACT_APP_GIPHY_KEY}&limit=15`;
+		const res = await fetch(url, { method: "GET" });
+		const gifs = await res.json();
+		return gifs.data;
+	} catch (err) {
+		console.log(err);
+	}
+};

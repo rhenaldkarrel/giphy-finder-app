@@ -1,3 +1,6 @@
 import { createContext } from "react";
-const SearchContext = createContext("mario");
+const SearchContext = createContext({
+	keyword: "",
+	setKeyword: () => {},
+});
 export default SearchContext;

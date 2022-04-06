@@ -1,7 +1,7 @@
 import React, { useState, useContext, useEffect } from "react";
 
 // API
-import { getData } from "../../auth/api";
+import { getData } from "../../api/api";
 
 // Components
 import Gifs from "../../components/GifCard";
@@ -14,15 +14,12 @@ import SearchContext from "../../context/SearchContext";
 import "./index.css";
 
 const Home = () => {
-	const defaultKeyword = useContext(SearchContext);
-
 	// State
 	const [result, setResult] = useState([]);
-	const [keyword, setKeyword] = useState(defaultKeyword);
+	const { keyword, setKeyword } = useContext(SearchContext);
 
-	// Onload immediately search for 'twice' giphy
 	useEffect(() => {
-		getData(defaultKeyword).then((gifs) => {
+		getData(keyword).then((gifs) => {
 			setResult(gifs);
 		});
 	}, []);

@@ -1,0 +1,47 @@
+.App {
+	text-align: center;
+	background-color: #282c34;
+	min-height: 100vh;
+}
+
+.App-header {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: start;
+	font-size: calc(10px + 2vmin);
+	color: white;
+}
+
+.container {
+	width: 100%;
+	max-width: fit-content;
+	padding-block: 2rem;
+}
+
+/* Gif Result */
+.result {
+	display: flex;
+	gap: 0.5rem;
+	max-width: 100%;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	padding-inline: 1.5rem;
+}
+
+.result > * {
+	border-radius: 0.3em;
+	margin-top: 1.5rem;
+}
+
+.result img {
+	border-radius: 0.3em;
+	min-height: 15rem;
+	box-shadow: 0 1em 2em rgba(0, 0, 0, 0.3);
+}
+
+.result .gif-title {
+	font-size: 0.875rem;
+	color: rgba(255, 255, 255, 0.3);
+}
