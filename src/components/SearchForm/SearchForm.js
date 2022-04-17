@@ -1,16 +1,17 @@
-import "./Search.css";
+import styles from "./SearchForm.module.css";
 
 const Search = ({ onSubmit, onChange }) => {
 	return (
-		<form action='#' onSubmit={onSubmit}>
+		<form action='#' className={styles.form} onSubmit={onSubmit}>
 			<input
 				type='text'
 				id='search'
 				placeholder='Find a giphy...'
 				autoComplete='off'
 				onChange={onChange}
+				className={styles.input}
 			/>
-			<button>Search</button>
+			<button className={styles.button}>Search</button>
 		</form>
 	);
 };

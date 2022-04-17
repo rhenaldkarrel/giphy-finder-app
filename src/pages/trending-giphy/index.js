@@ -7,7 +7,7 @@ import "./index.css";
 import { getTrending } from "../../api/api";
 
 // Components
-import Gifs from "../../components/GifCard";
+import Gifs from "../../components/GifCard/GifCard";
 
 const Trending = () => {
 	const [result, setResult] = useState([]);
@@ -21,7 +21,7 @@ const Trending = () => {
 	return (
 		<div className='trending-giphy'>
 			<header className='trending-giphy-header'>
-				<h1>Trending Gifs</h1>
+				<h2>Trending Giphy</h2>
 				<div className='trending-giphy-result'>
 					<Gifs data={result} />
 				</div>
