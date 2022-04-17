@@ -1,4 +1,4 @@
-.navigation {
+nav {
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -11,31 +11,31 @@
 	position: relative;
 }
 
-.navigation .navbar-logo {
+nav .navbar-logo {
 	width: 8rem;
 }
 
-.navigation .navbar-logo img {
+nav .navbar-logo img {
 	width: 100%;
 }
 
-.navigation ul {
+nav ul {
 	display: flex;
 	gap: 2rem;
 	list-style-type: none;
 }
 
-.navigation li {
+nav li {
 	display: inline;
 }
 
-.navigation a {
+nav a {
 	text-decoration: none;
 	color: white;
 	font-family: monospace;
 	padding-block: 0.5rem;
 }
 
-.navigation a:hover {
+nav a:hover {
 	border-bottom: 2px solid #fff;
 }

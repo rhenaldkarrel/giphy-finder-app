@@ -1,22 +1,27 @@
-import React, { useState, useContext, useEffect } from "react";
+import React, { useState, useEffect } from "react";
+import { useDispatch } from "react-redux";
 
 // API
 import { getData } from "../../api/api";
 
 // Components
-import Gifs from "../../components/GifCard";
-import Search from "../../components/Search";
+import Gifs from "../../components/GifCard/GifCard";
+import Search from "../../components/SearchForm/SearchForm";
 
-// Context
-import SearchContext from "../../context/SearchContext";
+// Redux
+import store from "../../store/store";
+import { setKeyword } from "../../store/keywordSlice";
 
 // Style
 import "./index.css";
 
 const Home = () => {
+	// Dispatch
+	const dispatch = useDispatch();
+
 	// State
 	const [result, setResult] = useState([]);
-	const { keyword, setKeyword } = useContext(SearchContext);
+	const [keyword, setKeyword] = useState("");
 
 	useEffect(() => {
 		getData(keyword).then((gifs) => {
@@ -26,13 +31,9 @@ const Home = () => {
 
 	const handleChange = (e) => setKeyword(e.target.value);
 
-	const getResult = () => {
-		getData(keyword).then((gifs) => setResult(gifs));
-	};
-
 	const handleSubmit = (e) => {
 		e.preventDefault();
-		getResult();
+		getData(keyword).then((gifs) => setResult(gifs));
 	};
 
 	return (
